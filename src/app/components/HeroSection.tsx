@@ -23,13 +23,19 @@ export function HeroSection() {
           Experience the spiritual journey of a lifetime with our curated tours to the sacred city of Lord Ram
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition-all flex items-center justify-center gap-2 shadow-lg">
+          <a 
+            href="#packages"
+            className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 rounded-lg transition-all flex items-center justify-center gap-2 shadow-lg"
+          >
             Explore Packages
             <ArrowRight className="w-5 h-5" />
-          </button>
-          <button className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg border-2 border-white/30 transition-all">
-            Learn More
-          </button>
+          </a>
+          <a 
+            href="tel:+919369187566"
+            className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-lg border-2 border-white/30 transition-all flex items-center justify-center"
+          >
+            Call Now
+          </a>
         </div>
       </div>
 

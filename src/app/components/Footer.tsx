@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter, Youtube, Mail, Phone, MapPin } from "lucide-react";
+import { Link } from "react-router";
 import React from "react";
 
 export function Footer() {
@@ -40,12 +41,12 @@ export function Footer() {
           <div>
             <h3 className="text-lg mb-4">Quick Links</h3>
             <ul className="space-y-3 text-sm text-white/70">
-              <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Tour Packages</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Gallery</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Testimonials</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Blog</a></li>
+              <li><Link to="/" className="hover:text-white transition-colors">Home</Link></li>
+              <li><Link to="/#packages" className="hover:text-white transition-colors">Tour Packages</Link></li>
+              <li><Link to="/about" className="hover:text-white transition-colors">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-white transition-colors">Contact</Link></li>
+              <li><a href="https://www.instagram.com/ayodhya.tourguide" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Gallery</a></li>
+              <li><Link to="/#testimonials" className="hover:text-white transition-colors">Testimonials</Link></li>
             </ul>
           </div>
 
@@ -66,32 +67,15 @@ export function Footer() {
           <div>
             <h3 className="text-lg mb-4">Contact Us</h3>
             <ul className="space-y-3 text-sm text-white/70">
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
-                <span>Ram Path, Near Railway Station<br />Ayodhya, UP 224123</span>
-              </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+91 98765 43210</span>
+                <span>+91 9369187566</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>info@ayodhyatours.com</span>
+                <span>dprakhar007@gmail.com</span>
               </li>
             </ul>
-            <div className="mt-4">
-              <p className="text-sm text-white/70 mb-2">Subscribe to our newsletter</p>
-              <div className="flex gap-2">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-3 py-2 bg-white/10 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-white/50"
-                />
-                <button className="bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-all">
-                  <Mail className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
           </div>
         </div>
 

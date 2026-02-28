@@ -33,7 +33,7 @@ const packages = [
 
 export function TourPackages() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-orange-50 to-white">
+    <section id="packages" className="py-20 px-4 bg-gradient-to-b from-orange-50 to-white scroll-mt-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl mb-4">Our Tour Packages</h2>
@@ -91,9 +91,12 @@ export function TourPackages() {
                     <span className="text-muted-foreground text-sm">Starting from</span>
                     <p className="text-2xl text-orange-600">{pkg.price}</p>
                   </div>
-                  <button className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-all">
+                  <a 
+                    href="tel:+919369187566"
+                    className="bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg transition-all"
+                  >
                     Book Now
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
