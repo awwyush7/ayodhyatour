@@ -1,7 +1,6 @@
 import { Menu, X, Phone, Sparkles } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router";
-import React from "react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);

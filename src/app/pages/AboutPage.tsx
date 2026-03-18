@@ -1,6 +1,5 @@
 import { ArrowRight, Heart, Users, Award, Shield, MapPin, Clock, Phone } from "lucide-react";
 import { Link } from "react-router";
-import React from "react";
 
 export function AboutPage() {
   return (
