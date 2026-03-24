@@ -27,7 +27,7 @@ export function ContactSection() {
         from_email: formData.get('from_email'),
         from_phone: formData.get('from_phone'),
         message: formData.get('message'),
-        to_email: 'dprakhar007@gmail.com', // Recipient email
+        to_email: 'trustedtourandtravel@icloud.com', // Recipient email
       };
       
       // Send email using EmailJS
