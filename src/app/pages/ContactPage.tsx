@@ -11,6 +11,8 @@ import { useState, useRef } from "react";
 import { motion } from "motion/react";
 import emailjs from "@emailjs/browser";
 import { EMAILJS_CONFIG } from "../../config/emailjs";
+import React from "react";
+
 
 export function ContactPage() {
   const formRef = useRef<HTMLFormElement>(null);

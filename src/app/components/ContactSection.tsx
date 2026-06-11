@@ -3,6 +3,8 @@ import { useState, useRef } from "react";
 import { motion } from "motion/react";
 import emailjs from "@emailjs/browser";
 import { EMAILJS_CONFIG } from "../../config/emailjs";
+import React from "react";
+
 
 export function ContactSection() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -165,9 +167,8 @@ export function ContactSection() {
                     Special Offer!
                   </h3>
                   <p className="text-white/90 mb-6 leading-relaxed">
-                    Book your tour before March 2026 and get 15%
-                    off on all packages. Limited time offer for
-                    group bookings.
+                    Book your group tour today and save 15% on all packages.
+                    Call us to confirm availability and lock in your dates.
                   </p>
                 </div>
               </div>
