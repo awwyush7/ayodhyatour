@@ -1,4 +1,4 @@
-import { Menu, X, Phone, Sparkles } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router";
 import { motion, AnimatePresence } from "motion/react";
@@ -34,23 +34,33 @@ export function Navbar() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-500 via-orange-600 to-red-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all group-hover:scale-105">
-                <span className="text-white text-2xl">🕉️</span>
-              </div>
-              <div className="absolute -top-1 -right-1 w-4 h-4 bg-yellow-400 rounded-full flex items-center justify-center">
-                <Sparkles className="w-2.5 h-2.5 text-orange-700" />
-              </div>
+            <div className="w-11 h-11 bg-gradient-to-br from-orange-500 to-orange-800 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all group-hover:scale-105 flex-shrink-0">
+              {/* Nagara temple spire — modern minimal icon */}
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-6 h-6">
+                {/* Central shikhara (main spire) */}
+                <path d="M12 2L9.5 7H14.5L12 2Z" fill="white"/>
+                {/* Left mini spire */}
+                <path d="M7.5 5.5L6 8H9L7.5 5.5Z" fill="white" fillOpacity="0.75"/>
+                {/* Right mini spire */}
+                <path d="M16.5 5.5L15 8H18L16.5 5.5Z" fill="white" fillOpacity="0.75"/>
+                {/* Horizontal molding connecting all spires */}
+                <rect x="5.5" y="7.5" width="13" height="1.5" rx="0.75" fill="white"/>
+                {/* Main hall / garbhagriha */}
+                <rect x="7" y="9" width="10" height="4.5" rx="0.75" fill="white" fillOpacity="0.85"/>
+                {/* Doorway arch */}
+                <path d="M11 13.5V12C11 11.45 11.45 11 12 11C12.55 11 13 11.45 13 12V13.5" fill="white" fillOpacity="0.35"/>
+                {/* Wide plinth / base */}
+                <rect x="3.5" y="13.5" width="17" height="2" rx="0.75" fill="white"/>
+                {/* Steps */}
+                <rect x="5" y="15.5" width="14" height="1.5" rx="0.5" fill="white" fillOpacity="0.65"/>
+                <rect x="6.5" y="17" width="11" height="1.5" rx="0.5" fill="white" fillOpacity="0.4"/>
+              </svg>
             </div>
             <div>
-              <h1 className="text-xl font-semibold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent">
+              <h1 className="text-xl font-semibold bg-gradient-to-r from-orange-600 to-orange-800 bg-clip-text text-transparent leading-tight">
                 Ayodhya Tours
               </h1>
-              <p
-                className={`text-xs font-medium transition-colors duration-300 ${
-                  scrolled ? "text-muted-foreground" : "text-white/70"
-                }`}
-              >
+              <p className={`text-xs font-medium tracking-wide transition-colors duration-300 ${scrolled ? "text-muted-foreground" : "text-white/65"}`}>
                 Sacred Journeys Await
               </p>
             </div>
