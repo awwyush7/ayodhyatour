@@ -3,14 +3,16 @@ import { TourPackages } from "../components/TourPackages";
 import { AboutSection } from "../components/AboutSection";
 import { ContactSection } from "../components/ContactSection";
 import { SocialProof } from "../components/SocialProof";
+import React from "react";
+
 
 export function HomePage() {
   return (
     <>
       <HeroSection />
-      {/* <SocialProof /> */}
       <TourPackages />
       <AboutSection />
+      <SocialProof />
       <ContactSection />
     </>
   );

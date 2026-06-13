@@ -1,5 +1,8 @@
-import { Heart, Shield, Award, Clock } from "lucide-react";
+import { Heart, Shield, Award, Clock, Star, Users } from "lucide-react";
 import { motion } from "motion/react";
+import { Link } from "react-router";
+import React from "react";
+
 
 const features = [
   {
@@ -24,13 +27,19 @@ const features = [
   },
 ];
 
+const stats = [
+  { icon: Users, value: "1000+", label: "Pilgrims" },
+  { icon: Star, value: "4.9★", label: "Rating" },
+  { icon: Award, value: "5+", label: "Yrs Experience" },
+];
+
 export function AboutSection() {
   return (
     <section className="py-24 px-4 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Image Side */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -49,7 +58,7 @@ export function AboutSection() {
                 <p className="text-xl font-medium text-white/90">Happy Pilgrims</p>
               </div>
             </div>
-            {/* Decorative Element */}
+            {/* Decorative blur circles */}
             <div className="absolute -z-10 -bottom-8 -left-8 w-64 h-64 bg-orange-100 rounded-full blur-3xl"></div>
             <div className="absolute -z-10 -top-8 -right-8 w-64 h-64 bg-red-100 rounded-full blur-3xl"></div>
           </motion.div>
@@ -66,15 +75,15 @@ export function AboutSection() {
               Why Choose Our Ayodhya Tours?
             </h2>
             <p className="text-lg text-gray-600 mb-10 leading-relaxed">
-              We are dedicated to providing an authentic and enriching spiritual experience. 
-              With years of expertise in organizing pilgrimages to Ayodhya, we ensure every 
+              We are dedicated to providing an authentic and enriching spiritual experience.
+              With years of expertise in organizing pilgrimages to Ayodhya, we ensure every
               moment of your journey is memorable and meaningful.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
               {features.map((feature, index) => (
-                <motion.div 
-                  key={index} 
+                <motion.div
+                  key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -86,21 +95,31 @@ export function AboutSection() {
                   </div>
                   <div>
                     <h3 className="mb-2 font-bold text-gray-900 text-lg">{feature.title}</h3>
-                    <p className="text-sm text-gray-600 leading-relaxed">
-                      {feature.description}
-                    </p>
+                    <p className="text-sm text-gray-600 leading-relaxed">{feature.description}</p>
                   </div>
                 </motion.div>
               ))}
             </div>
 
-            <motion.button 
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="mt-12 bg-gray-900 hover:bg-black text-white px-8 py-4 rounded-xl transition-all font-semibold shadow-lg"
+            {/* Stats strip */}
+            <div className="mt-10 pt-8 border-t border-gray-100 flex items-center gap-6 sm:gap-10">
+              {stats.map((stat, i) => (
+                <React.Fragment key={stat.label}>
+                  {i > 0 && <div className="w-px h-10 bg-gray-200 flex-shrink-0"></div>}
+                  <div>
+                    <p className="text-2xl font-black text-orange-600">{stat.value}</p>
+                    <p className="text-xs text-gray-500 font-medium mt-0.5">{stat.label}</p>
+                  </div>
+                </React.Fragment>
+              ))}
+            </div>
+
+            <Link
+              to="/about"
+              className="mt-10 inline-block bg-gray-900 hover:bg-black text-white px-8 py-4 rounded-xl transition-all font-semibold shadow-lg hover:-translate-y-0.5 transform"
             >
               Learn More About Us
-            </motion.button>
+            </Link>
           </motion.div>
         </div>
       </div>
