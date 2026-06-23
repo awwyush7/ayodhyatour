@@ -11,7 +11,48 @@ import { useState, useRef } from "react";
 import { motion } from "motion/react";
 import emailjs from "@emailjs/browser";
 import { EMAILJS_CONFIG } from "../../config/emailjs";
+import { SEOHead } from "../components/SEOHead";
+import { Helmet } from "react-helmet-async";
 import React from "react";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How do I book an Ayodhya tour?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Simply call us at +91 93691 87566 or fill out the contact form. Our team will help you customise the perfect package for your needs.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is included in the Ayodhya tour packages?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Our packages typically include temple visits (Ram Mandir, Hanuman Garhi, Kanak Bhawan and more), transportation, experienced guides, and meals. Specific inclusions vary by package.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can I customise my Ayodhya tour?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely! We specialise in creating customised spiritual experiences. Contact us to discuss your specific requirements and preferences.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is your cancellation policy?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We offer flexible cancellation up to 7 days before departure. Contact us for detailed terms and conditions.",
+      },
+    },
+  ],
+};
 
 
 export function ContactPage() {
@@ -67,6 +108,14 @@ export function ContactPage() {
 
   return (
     <div className="pt-20 bg-gray-50">
+      <SEOHead
+        title="Contact Us – Plan Your Ayodhya Spiritual Journey"
+        description="Get in touch with Ayodhya Tours to plan your pilgrimage. Call +91 93691 87566 or email dprakhar007@gmail.com. We respond within 24 hours. Available Mon–Sun 6 AM–10 PM."
+        path="/contact"
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-24 px-4 bg-gradient-to-br from-orange-600 via-orange-700 to-red-700 text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620002167389-13835bd0f8e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80')] opacity-10 bg-cover bg-center mix-blend-overlay"></div>

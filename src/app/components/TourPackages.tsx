@@ -74,7 +74,8 @@ export function TourPackages() {
               <div className="relative h-64 overflow-hidden">
                 <img
                   src={pkg.image}
-                  alt={pkg.title}
+                  alt={`${pkg.title} – Ayodhya Tours spiritual package`}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 {/* Featured badge */}

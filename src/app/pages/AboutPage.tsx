@@ -1,11 +1,40 @@
 import { ArrowRight, Heart, Users, Award, Shield, MapPin, Clock, Phone } from "lucide-react";
 import { Link } from "react-router";
 import { motion } from "motion/react";
+import { SEOHead } from "../components/SEOHead";
+import { Helmet } from "react-helmet-async";
 import React from "react";
+
+const aboutJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "TravelAgency",
+  name: "Ayodhya Tours",
+  url: "https://www.ayodhyatour.in/about",
+  telephone: "+919369187566",
+  email: "dprakhar007@gmail.com",
+  foundingDate: "2020",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Ayodhya",
+    addressRegion: "Uttar Pradesh",
+    addressCountry: "IN",
+  },
+  description:
+    "Ayodhya Tours has been guiding pilgrims to experience the divine beauty of Ayodhya since 2020, with over 5000 happy pilgrims and 500+ tours conducted.",
+  numberOfEmployees: { "@type": "QuantitativeValue", value: "10" },
+};
 
 export function AboutPage() {
   return (
     <div className="pt-20">
+      <SEOHead
+        title="About Us – Trusted Ayodhya Pilgrimage Specialists Since 2020"
+        description="Learn about Ayodhya Tours – founded in 2020, trusted by 5000+ pilgrims. Expert local guides, customised spiritual packages, and 24/7 support for your Ram Mandir journey."
+        path="/about"
+      />
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(aboutJsonLd)}</script>
+      </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 bg-gradient-to-br from-orange-50 via-white to-orange-50">
         <div className="max-w-6xl mx-auto">
@@ -31,7 +60,8 @@ export function AboutPage() {
             >
               <img
                 src="https://images.unsplash.com/photo-1652059468424-249066e3a98f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxheW9kaHlhJTIwcmFtJTIwbWFuZGlyJTIwdGVtcGxlfGVufDF8fHx8MTc3MTkxNjc3NHww&ixlib=rb-4.1.0&q=80&w=1080"
-                alt="Ayodhya Ram Mandir"
+                alt="Ayodhya Ram Mandir – the newly constructed temple in Ayodhya, Uttar Pradesh"
+                loading="lazy"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"
               />
             </motion.div>

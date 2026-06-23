@@ -49,7 +49,8 @@ export function AboutSection() {
             <div className="relative h-[600px] rounded-[2rem] overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1717310686662-d1d0ca8427ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZW1wbGUlMjBwaWxncmltYWdlJTIwaW5kaWF8ZW58MXx8fHwxNzcxOTE2Nzc1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Ayodhya Temple"
+                alt="Pilgrims at an Ayodhya temple during a spiritual tour"
+                loading="lazy"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
