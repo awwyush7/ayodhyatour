@@ -172,9 +172,13 @@ export function ContactSection() {
                   </p>
                 </div>
               </div>
-              <button className="w-full bg-white text-orange-600 hover:bg-orange-50 px-6 py-4 rounded-xl transition-all font-bold hover:shadow-lg relative z-10">
-                Claim Offer Now
-              </button>
+              <a
+                href="tel:+919369187566"
+                className="w-full bg-white text-orange-600 hover:bg-orange-50 px-6 py-4 rounded-xl transition-all font-bold hover:shadow-lg relative z-10 flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call to Claim Offer
+              </a>
             </div>
           </motion.div>
 
@@ -272,6 +276,14 @@ export function ContactSection() {
                   {isSubmitting ? "Sending..." : "Send Inquiry"}
                   {!isSubmitting && <Send className="w-5 h-5" />}
                 </button>
+
+                <div className="flex items-center justify-center gap-4 pt-2 text-xs text-gray-400">
+                  <span className="flex items-center gap-1">🔒 No advance payment</span>
+                  <span className="w-px h-3 bg-gray-200"></span>
+                  <span className="flex items-center gap-1">✓ Reply within 2 hours</span>
+                  <span className="w-px h-3 bg-gray-200"></span>
+                  <span className="flex items-center gap-1">🛡️ Trusted by 1000+</span>
+                </div>
               </form>
             )}
           </motion.div>

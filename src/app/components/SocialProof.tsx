@@ -33,7 +33,7 @@ function getInitials(name: string) {
 
 export function SocialProof() {
   return (
-    <section className="py-24 px-4 bg-white overflow-hidden">
+    <section id="testimonials" className="py-24 px-4 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="bg-gradient-to-br from-orange-50 to-amber-50/50 rounded-[3rem] p-8 md:p-12 border border-orange-100">
           <motion.div

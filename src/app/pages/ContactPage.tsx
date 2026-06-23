@@ -293,9 +293,9 @@ export function ContactPage() {
                       Special Offer!
                     </h3>
                     <p className="text-white/90 font-medium">
-                      Book your tour before March 2026 and get
-                      15% off on all packages. Limited time
-                      offer for group bookings.
+                      Book your group tour today and get 15% off
+                      on all packages. Call us to confirm
+                      availability and lock in your dates.
                     </p>
                   </div>
                 </div>
@@ -447,10 +447,13 @@ export function ContactPage() {
                     )}
                   </button>
 
-                  <p className="text-sm text-gray-500 text-center font-medium mt-4">
-                    By submitting this form, you agree to our
-                    privacy policy
-                  </p>
+                  <div className="flex items-center justify-center gap-4 pt-2 text-xs text-gray-400">
+                    <span>🔒 No advance payment</span>
+                    <span className="w-px h-3 bg-gray-200"></span>
+                    <span>✓ Reply within 2 hours</span>
+                    <span className="w-px h-3 bg-gray-200"></span>
+                    <span>🛡️ Trusted by 1000+</span>
+                  </div>
                 </form>
               )}
             </motion.div>

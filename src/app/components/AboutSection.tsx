@@ -116,7 +116,7 @@ export function AboutSection() {
 
             <Link
               to="/about"
-              className="mt-10 inline-block bg-gray-900 hover:bg-black text-white px-8 py-4 rounded-xl transition-all font-semibold shadow-lg hover:-translate-y-0.5 transform"
+              className="mt-10 inline-block bg-orange-800 hover:bg-orange-900 text-white px-8 py-4 rounded-xl transition-all font-semibold shadow-lg hover:-translate-y-0.5 transform"
             >
               Learn More About Us
             </Link>
